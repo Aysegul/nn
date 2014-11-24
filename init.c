@@ -116,6 +116,9 @@
 #include "generic/SpatialUpSamplingNearest.c"
 #include "THGenerateFloatTypes.h"
 
+#include "generic/LogRegSoftMax.c"
+#include "THGenerateFloatTypes.h"
+
 LUA_EXTERNC DLL_EXPORT int luaopen_libnn(lua_State *L);
 
 int luaopen_libnn(lua_State *L)
@@ -138,6 +141,7 @@ int luaopen_libnn(lua_State *L)
   nn_FloatLogSigmoid_init(L);
   nn_FloatSigmoid_init(L);
   nn_FloatSoftMax_init(L);
+  nn_FloatLogRegSoftMax_init(L);
   nn_FloatSoftPlus_init(L);
   nn_FloatTanh_init(L);
   nn_FloatAbs_init(L);
@@ -176,6 +180,7 @@ int luaopen_libnn(lua_State *L)
   nn_DoubleLogSigmoid_init(L);
   nn_DoubleSigmoid_init(L);
   nn_DoubleSoftMax_init(L);
+  nn_DoubleLogRegSoftMax_init(L);
   nn_DoubleSoftPlus_init(L);
   nn_DoubleTanh_init(L);
   nn_DoubleAbs_init(L);
